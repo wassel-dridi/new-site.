@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gta San Andreas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo">
+        <a href="#">Gta San Andreas</a>
+      </div>
+      
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="down.html" target="_blank">download</a></li>
+        <li><a href="code.html" target="_blank">Code</a></li>
+      </ul>
+      <audio src="gta.mp3" id="audio" controls style="display:none;"></audio>
+      <button  style="border:1px solid #3498db;
+      background: none;
+      padding: 10px 20px ;
+       font-size: 20px;
+       cursor: pointer;
+       margin: 10px;
+       color: white;
+       display: flex;"
+       id="btn"  type="button" onclick="palyaudio();">paly audio </button>
+<script>
+function palyaudio() {
+document.getElementById("audio").play();
+} 
+</script>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+  <div class="banner"></div>
+  <div class="about">
+    <div class="content">
+    </div>
+  </div>
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+   <footer>
+    <div class="footer-content">
+        <h3>Gta San Andreas</h3>
+        <p>site Gta San Andreas by Wassel dridi With Team Flyu for Download gta </p>
+        <ul class="socials">
+            <li><a href="https://www.facebook.com/profile.php?id=100070912413249" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UC318GunQ8AJhdO9sJQ8GAXQ" target="_blank"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="https://www.instagram.com/wassel.dri/t" target=blank><i class="fa fa-instagram"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>copyright &copy;2021 Gta San Andreas. designed by  Wassel dridi</p>
+    </div>
+</footer>
+</body>
+</html>
